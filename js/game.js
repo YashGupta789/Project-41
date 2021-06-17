@@ -48,18 +48,18 @@ class Game{
                 players[index - 1].x = x;
                 players[index - 1].y = y;
                 
-                if(index === player.index){                   
+                if(index === player.index){   
+                    push();                
                     strokeWeight(0.8);
                     stroke("yellow");
                     fill(250,0,0);
                     textSize(25);
                     text(allPlayers[plr].name,x-30,y+25);  
+                    pop();
                 }
             
                 //text to display player score.
-                strokeWeight(0.8);
-                stroke("yellow");
-                fill(250,0,0);
+                fill(0,255,255);
                 textSize(30);
                 text("Player 1 :"+allPlayers.player1.score,60,70);
                 text("Player 2 :"+allPlayers.player2.score,60,140);  
